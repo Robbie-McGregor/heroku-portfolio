@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800&display=swap');
 
 :root {
-  --bg-color: #23283e;
-  --primary-color: #cdcdff;
-  --secondary-color: #90a0d9;
-  --secondary-btn-color: #2a2f4c;
+  /* --bg-color: #23283e; */
+  --bg-color: #333138;
+  /* --primary-color: #cdcdff; */
+  --primary-color: #fffffa;
+  /* --secondary-color: #90a0d9; */
+  --secondary-color: #a491d3;
+  /* --secondary-btn-color: #2a2f4c; */
+  --secondary-btn-color: #3e3d42;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -13,6 +17,10 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -197,6 +205,7 @@ nav ul li a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
+  row-gap: 40px;
 }
 
 .card {
@@ -208,6 +217,7 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease;
+  max-width: 300px;
 }
 
 .card:hover {
@@ -254,4 +264,10 @@ nav ul li a {
 
 .section ul li {
   margin: 7px 7px;
+}
+
+@media (max-width: 1000px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }
