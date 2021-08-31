@@ -2,13 +2,13 @@
 
 :root {
   /* --bg-color: #23283e; */
-  --bg-color: #333138;
+  --bg-color: #ffffff;
   /* --primary-color: #cdcdff; */
-  --primary-color: #fffffa;
+  --primary-color: #302f2f;
   /* --secondary-color: #90a0d9; */
-  --secondary-color: #a491d3;
+  --secondary-color: #161616e1;
   /* --secondary-btn-color: #2a2f4c; */
-  --secondary-btn-color: #3e3d42;
+  --secondary-btn-color: #8aa5ff4b;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
@@ -103,6 +103,10 @@ nav ul li a {
   text-align: left;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.card .hover-link {
+  text-decoration: none;
 }
 
 .btn-primary {
