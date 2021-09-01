@@ -54,7 +54,7 @@ nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 nav .logo {
@@ -207,7 +207,7 @@ nav ul li a {
 .card-container {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
 }
@@ -221,7 +221,7 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   transition: transform 0.25s ease;
-  max-width: 300px;
+  width: 300px;
 }
 
 .card:hover {
@@ -270,8 +270,13 @@ nav ul li a {
   margin: 7px 7px;
 }
 
+small {
+  margin-top: 20px;
+}
+
 @media (max-width: 1000px) {
   .card-container {
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
