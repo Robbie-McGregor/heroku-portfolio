@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mortgage / Loan Calculator</title>
+        <!-- Meta Content -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Robbie McGregor">
+        <meta name="keywords" content="mortgage, home loan, calculator, loan, personal finance, debt, money">
+        <meta name="description" content="Useful loan calculator for mortgages and personal loans. Work out your payments and see how much interest you will end up paying.">
+        <meta name="robots" content="index,follow">  
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121476492-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121476492-1');
+    </script>
+
+    <!-- Font import -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="mortgagecalculator-mini.css">
+    <link rel="stylesheet" href="../css/card.css">
+
+    <!-- Libraries/External stylesheets -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.svg"></a>
+            </div>            
+            <div id="tagline">
+                <h1 class="tagline">TOOLS FOR FINANCIAL SUCCESS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="navLink">Home</a></li>
+                    <li><a href="../money-tools.html" class="navLink">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- Main -->
+    <main>
+        <div class="content">
+            <div class="introduction">
+                <div class="introHeading">
+                    <div>
+                        <h1><i class="fas fa-home"></i></h1>
+                    </div>
+                    <div>
+                        <h1>Mortgage Calculator</h1>  
+                    </div>
+                </div>
+                <br>
+                <p>
+                    Not sure if you can afford a home loan? Use calculator to work out what your regular payments would be, as well as the total repayment and amount of interest. Try changing the term length to see how the overall interest amount is affected. By reducing the length of the loan you can make big savings on interest costs.
+                </p>
+                <p class="highlightGreen">
+                    <em>Tip:</em> If you use a 'deposit' of $0, you can also use this calculator for personal and auto loans
+                </p>
+                <br>
+            </div>
+            <!-- Table 1 -->
+            <div class="wrapper">
+                <div class="table" id="table">
+                    <!-- Inputs -->
+                    <div class="inputs tableSection">
+                            <h3 class="tableHeading">Mortgage Terms</h3>
+                            <div class="tableBody columnFlex"> 
+                                    <div>
+                                        <h4>House Value</h4>
+                                        <span class="inputOverlayDollars"><input type="text" name="" id="houseValue" class="inputBox"><span id="houseValueFeedback"></span></span>
+                                    </div>
+                                    <div>
+                                        <h4>Deposit</h4> 
+                                            <span class="depositDiv">                                        
+                                            <span class="depositPercent"><input type="number" id="depositPercent" step="0.01"></span>
+                                            <span class="inputOverlayDollars"><input type="text" name="" id="deposit" class="inputBox"></span><span id="depositFeedback"></span>
+                                            </span>
+                                    </div>
+                                    <div>
+                                        <h4>Interest Rate</h4>
+                                        <span class="inputOverlayInterest"><input type="number" name="" id="interestRate" step="0.001" class="inputBox"><span id="interestRateFeedback"></span></span>
+                                    </div>
+                                    <div class="textAlignRight">
+                                        <h4>Loan Term</h4>
+                                        <span class="inputOverlayYears"><input type="number" name="" step="0.01" id="term" class="inputBox "><span id="loanTermFeedback"></span></span>
+                                    </div>
+                                <h4>Repayment Frequency</h4>
+                                <div class="frequencyButtons">
+                                    <button id="weeklyRepayments" class="frequencyButton">Weekly</button>
+                                    <button id="fortnightlyRepayments" class="frequencyButton frequencyButtonActive">Fortnightly</button>
+                                    <button id="monthlyRepayments" class="frequencyButton">Monthly</button>
+                                </div> 
+                            </div>
+                    </div>
+                <!-- Results -->
+                    <div class="results tableSection inactive" id="results">
+                        <h3 class="tableHeading">Results</h3>
+                        <div class="tableBody columnFlex">
+                            <div class="result">
+                                <div>
+                                    <span id="repaymentFrequency" class="blue">Fortnightly</span><span class="blue  "> Payments</span>
+                                </div>
+                                <div class="blue moneyText">
+                                    $<span id="repaymentAmountText" class="moneyText">-</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="result">
+                                <div>
+                                    <span class="purple  ">Total Repayment</span>
+                                </div>
+                                <div class="purple moneyText">
+                                        $<span id="totalRepayment" class="moneyText">-</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="result">
+                                <div>
+                                    Total <span class="brown  ">Loan Principal</span>
+                                </div>
+                                <div class="brown moneyText">
+                                    $<span id="principal" class="moneyText">-</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="result">
+                                <div>
+                                    Total <span class="red  ">Interest</span>
+                                </div>
+                                <div class="red moneyText">
+                                    $<span id="totalInterest" class="moneyText">-</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- Graph -->
+                            <div class="result graphP">
+                                <div class="graph" id="graph">
+                                    <div class="graphTitle">House Value vs Interest</div>
+                                    <div id="houseValueColumn"></div>
+                                    <div id="interestAxis"></div>
+                                    <div id="houseValueText">House Value<br><span id="houseValueColumnText">$</span></div>
+                                    <div id="interestText">Interest<br><span id="interestColumnText">$</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </main>
+<!-- Footer -->
+    <footer>
+        <div>
+            <img id="footerLogo" src="../images/logo.svg">
+        </div>
+    </footer>
+<!-- Javascript -->
+    <script src="mortgagecalculator-mini.js"></script>
+</body>
+
+</html>

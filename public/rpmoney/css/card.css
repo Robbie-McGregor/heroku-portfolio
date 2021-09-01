@@ -1,0 +1,227 @@
+.cardWrapper {
+  width: 100%;
+  padding-top: 5vw;
+}
+
+.cardWrapper h1 {
+  text-align: center;
+}
+
+.card {
+  margin-top: 5vw;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+  min-height: 45vw;
+  border-radius: 1px;
+  background: white;
+  display: flex;
+  box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5),
+    0px 15px 35px rgba(128, 128, 128, 0.5);
+  align-items: stretch;
+  position: relative;
+  border-radius: 5px;
+}
+
+.card h1 {
+  font-size: 2em;
+  margin: 2.5%;
+  width: 100%;
+  overflow: hidden;
+  font-size: calc(12px + 3.5vw);
+  text-align: left;
+  padding-right: 10%;
+  color: #444444;
+}
+
+.cardLeftSide {
+  width: 40%;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.cardRightSide {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+  font-family: 'Playfair Display', serif;
+  width: 60%;
+}
+
+.cardRightSide i {
+  position: absolute;
+  right: 2.5%;
+  top: 5%;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 20%;
+}
+
+.card a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.cardRightSide a i:hover {
+  transform: scale(1.35);
+  transition-duration: 0.3s;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  transition-duration: 0.3s;
+}
+
+.card p {
+  margin: 2.5%;
+  font-size: calc(12px + 1vw);
+  font-family: 'raleway', Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.salmonBg {
+  background: rgb(255, 219, 212);
+  border: 1px solid rgba(255, 159, 159, 0.486);
+}
+
+.highlightGreen {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 90%;
+  background: rgb(212, 255, 212);
+  border: 1px solid rgba(154, 194, 154, 0.5);
+}
+
+.highlight p {
+  margin: 0;
+  padding: 0;
+}
+
+#errorMessage {
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0%;
+  width: 70%;
+  left: 15%;
+  z-index: 1;
+  visibility: hidden;
+}
+
+#errorMessage em {
+  display: block;
+  font-style: normal;
+  text-align: center;
+}
+
+#errorMessage p {
+  line-height: 1.5;
+  margin-top: 12px;
+}
+
+#timerCountdownText {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: none;
+  height: 50%;
+  font-size: 16px;
+  padding-left: 20px;
+  position: absolute;
+  right: 10px;
+  bottom: 25%;
+  color: rgb(83, 8, 8);
+}
+
+#closeError {
+  margin-top: 10px;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255, 154, 154, 0.459);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#closeError:hover {
+  background: rgb(255, 154, 154);
+}
+
+.yellowBg {
+  background: rgb(246, 205, 117);
+}
+
+.skyBlueBg {
+  /* background:  rgba(191, 222, 255, 0.472); */
+  /* background: rgb(240, 240, 240); */
+  background: #f2f2f2;
+  /* background: white; */
+}
+
+.mortgageBg {
+  background: url('../images/erol-ahmed-255854-unsplash.jpg') no-repeat 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.compoundBg {
+  background: url('../images/compoundinterest.jpg') no-repeat 50%;
+  background-position: right;
+  background-size: cover;
+}
+
+.contructionBg {
+  background: url('../images/dakota-roos-1311-unsplash.jpg') no-repeat 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.budgetBg {
+  background: url('../images/budget.jpeg') no-repeat 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 1000px) {
+  .flexBox {
+    display: flex;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    min-height: 350px;
+    display: flex;
+    margin-top: 35px;
+  }
+
+  .cardLeftSide {
+    width: 45%;
+  }
+
+  .cardRightSide {
+    width: 45%;
+  }
+
+  .card h1 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    margin-top: 25px;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}

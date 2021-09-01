@@ -1,0 +1,450 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'raleway', Arial, Helvetica, sans-serif;
+}
+
+html{
+  font-size: calc(12px + 1vw);  
+}
+
+h1{
+  font-weight: 300;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.introHeading{
+  margin-top: 30px;
+}
+
+h1 i{
+  margin-right: 15px;
+  border-radius: 20% 30%;
+  color:  rgb(0, 22, 219);
+  font-size: 35px;
+  border: 3px solid rgb(8, 12, 49);
+  padding: 15px;
+}
+
+p{
+  line-height: 1.75rem;
+}
+
+.wrapper{
+  width: 95%;
+  margin: 0px auto;
+}
+
+
+.tableSection{
+  background: rgb(232,238,255);
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 3px;
+  border:none;
+  padding-bottom: 5px;
+  box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5), 0px 15px 35px rgba(128, 128, 128, 0.5);
+}
+
+.tableHeading{
+  text-align: center;
+  background: rgb(144, 195, 253);
+  color: black;
+  padding: 10px;
+  font-weight: 500;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.tableBody{
+  margin: 0px 0px;
+  padding: 10px 20px;
+}
+
+h4{
+  font-weight: 500;
+  text-align: left;
+  margin-top: 10px;
+  
+}
+
+input{
+  font-size: 1rem;
+  color: rgb(58, 58, 58);
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+
+
+.inputOverlayYears, .inputOverlayInterest,
+.inputOverlayDollars{
+  position: relative;
+}
+
+.inputOverlayDollars::after{
+  content:"$";
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+
+.inputOverlayYears::after{
+  content:"years";
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+}
+
+.inputOverlayInterest::after{
+  content:"% p.a";
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+}
+
+#houseValue, #interestRate, #term{
+  width: calc(100% - 30px);
+  display: inline-block;
+}
+
+#deposit{
+  width: calc(100% - 140px);
+  margin-left: 7.5px;
+}
+
+#depositPercent{
+  width: 95px;
+  position: relative;
+  padding-right: 30px;
+} 
+
+.depositDiv{
+  position: relative;
+}
+
+.depositPercent::after{
+  position: absolute;
+  left: 70px;
+  bottom: 0px;
+  content: "%";
+}
+
+
+#houseValue, #deposit{
+  padding-left: 25px;
+}
+
+#interestRate, #term{
+  padding-right: 75px;
+}
+
+.check, .times{  
+  font-size: 28px;
+  height: 100%;
+  position: absolute;
+  top: -5px;
+  right: -40px;
+}
+
+.check{
+  color: rgb(29, 255, 29);
+}
+
+.times{
+  color: rgb(255, 29, 29);
+  right: -35px;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+.columnFlex{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+
+.inputs{
+  position: relative;
+}
+
+
+input:focus{
+  border: 1px solid rgb(74, 133, 228);
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+.frequencyButton{
+  cursor: pointer;
+  height: 40px;
+  margin: 5px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  box-shadow: 0;
+  border: none;
+  transition-duration: 0.2s;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 100%; 
+  margin-top: 15px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+}
+
+.frequencyButton:hover{
+  background: rgb(247, 102, 0);  
+}
+
+.frequencyButtonActive{
+  background: rgb(61, 151, 253);
+  color: white;
+}
+
+#calculateBtn{
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  background: rgb(74, 159, 255);
+  /* color: white; */
+
+}
+
+#calculateBtn:hover{
+  background: rgb(61, 151, 253);
+  background: rgb(247, 102, 0);
+  }
+
+#errorText ul{
+  margin-left: 20px;
+
+}
+
+
+.frequencyButton:first-of-type{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.frequencyButton:last-of-type{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.frequencyButtons{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+.result{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+
+.moneyText{
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+}
+
+
+.red{
+  color: red;
+  font-weight: 500;
+}
+
+.green{
+  color: green;
+  font-weight: 500;
+}
+
+.purple{
+  color: purple;
+  font-weight: 500;
+}
+
+.blue{
+  color: blue;
+  font-weight: 500;
+}
+
+.brown{
+  color: maroon;
+  font-weight: 500;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+hr{
+  opacity: 0.25;
+  margin: 7.5px 0;
+}
+
+
+.inactive{
+  opacity: .15;
+}
+
+
+.centered{
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Graph Below */
+
+#graph{
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 90%;
+  /* height: 100%; */
+  height: 0;
+  padding-bottom: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  border: 2px solid black;
+  /* background: rgba(24, 49, 190, 0.25); */
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+#houseValueColumn, #interestAxis{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  box-sizing: border-box;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+#houseValueColumn{
+  width: 30%;
+  height: 50%;
+  background: rgba(0, 128, 0);
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+}
+
+#houseValueColumnText, #interestColumnText{
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+#interestAxis{
+  width: 30%;
+  height: 50%;
+  background: rgba(255, 0, 0);
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+}
+
+#houseValueText, #interestText{
+  position: absolute;
+  bottom: -45px;
+  font-weight: 500;
+  width: 45%;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+#houseValueText{
+  left: 7.5%;
+}
+
+#interestText{
+  right: 7.5%;
+}
+
+.graphP{
+  margin-top: 15px;
+  margin-left: 5%;
+  margin-right: 5%
+}
+
+.graphTitle{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: -30px;
+  left: 0%;  
+  font-size: 1em;
+  font-weight: 700;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  
+  html{
+    font-size: 18px;
+  }
+
+  .introHeading{
+    display: flex;
+    justify-content: center;
+  }
+
+  h1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 48px;
+  }
+
+  .wrapper{
+    max-width: 1200px;
+  }
+
+  .table{
+    display: flex;
+  }
+
+  .tableSection{
+    margin: 10px;
+  }
+
+  .introduction{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+}

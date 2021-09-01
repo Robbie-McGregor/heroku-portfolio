@@ -1,0 +1,291 @@
+/* custom variables */
+
+    /*
+    orange: #f76600;
+    red: #ff0000;
+    lightgrey: #a9a9a9;
+    grey: #d1d1d1;
+    black: #121212; 
+    */
+
+
+
+/* Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    font-size: calc(12px + 1vw);
+    font-family: 'raleway', Arial, Helvetica, sans-serif;
+    box-sizing: border-box'
+  }
+  
+  
+body{
+    /* Display Settings */
+    width: 100%;
+    min-height: 100vh;
+    color: #444444 ;
+}
+
+
+main{
+    min-height: calc(100vh - 180px);
+}
+
+.top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.logo{
+    display: inline-block;
+    width: 150px;
+    height: 90px;
+    padding-top: 9px;
+    padding-left: 10px;
+    background: #181818;
+    box-sizing: border-box;
+}
+
+#tagline{
+    height: 90px;
+    box-sizing: border-box;
+    display: inline-block;
+    color: #d1d1d1;
+    background: #181818;
+    font-size: 1.5em;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 150px);
+}
+
+
+.tagline{
+    color: #d1d1d1;
+    background: #181818;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: block;
+    width: 100%;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.showcase{
+    width: 100%;
+    height: 100%;
+}
+
+
+nav li a:hover{
+    color: #ff0000;
+    font-weight: 700;
+    transition-duration: 0.3s;
+}
+
+.current{
+    color: #ff0000;
+
+}
+
+nav li a{
+    color: #181818;
+    text-decoration: none;
+    position: relative;
+}
+
+nav li a::after{
+    content: "";
+    width: 0%;
+    /* left: calc(50%); */
+    height: 2px;
+    position: absolute;
+    background: #181818;
+    display: block;
+    content: "";
+    left: 50%;
+    bottom: -5px;
+    background: #181818;
+    display: block;
+    transition-duration: 0.3s;
+
+}
+
+nav li a:hover::after{
+    left: 0;
+    width: 100%;
+}
+
+.introHeading{
+    text-align: center;
+}
+
+.introduction{
+    padding: 5% 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+}
+
+.introduction h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.introduction p{
+    line-height: 1.5;
+    font-size: 23px;
+}
+
+em{
+    font-weight: 600;
+}
+
+header::before{
+    content:"";
+    width: 100%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    top: 0;
+}
+
+.frontPageShowcase{
+    width: 100%;
+    background: url('../images/showcase.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    min-height: calc(100vh - (90px));
+    color: #121212;
+    transition-duration: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frontPageShowcase p{
+    color: black;
+}
+
+#scrollToContentIcon{
+    cursor: pointer;
+    position: absolute;
+    right: calc(50% - 24px);
+    bottom: 5%;
+    font-size: 48px;
+    transition-duration: 0.25;
+}
+
+#scrollToContentIcon:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+
+/* FOOTER GRID AREA SETTINGS */
+
+footer{
+    height: 90px;
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+    background-color: #181818;
+}
+#footerLogo{
+    margin-right: 10px;
+    margin-top: 7.5px;
+}
+
+
+
+
+/* Responsive Design Media Queries */
+
+
+
+
+
+
+@media only screen and (min-width: 1000px)  {
+
+    .introduction{
+        max-width: 1000px;
+    }
+
+
+
+
+header{
+    background: #181818;
+}
+
+html{
+    font-size: 18px;  
+}
+
+.top{
+    max-width: 1250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tagline{
+width: 500px;
+justify-self: flex-end;
+}
+
+nav{
+    justify-self: flex-start;
+    background: #181818;
+    width: auto;
+
+}
+
+nav li a::after{
+    background: #d1d1d1;
+}
+
+nav li a{
+    color: #d1d1d1;
+}
+
+
+}

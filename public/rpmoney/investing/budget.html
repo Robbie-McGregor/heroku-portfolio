@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Budget App</title>
+        <!-- Meta Content -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Robbie McGregor">
+        <meta name="keywords" content="budget, calculator, loan, personal finance, money">
+        <meta name="description" content="Use this budget calculator to keep track of your day-to-day finances.">
+        <meta name="robots" content="index,follow">  
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121476492-1"></script> -->
+    <!-- <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121476492-1');
+    </script> -->
+
+    <!-- Font import -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="budget-mini.css">
+
+    <!-- Libraries/External stylesheets -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <div class="top">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.svg"></a>
+            </div>            
+            <div id="tagline">
+                <h1 class="tagline">TOOLS FOR FINANCIAL SUCCESS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="navLink">Home</a></li>
+                    <li><a href="../money-tools.html" class="navLink">Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- Main --> 
+<main>
+<div id="app-grid-wrapper">
+
+
+    <!-- <div id="left-side-bar">
+        <button id="budget-display-btn" class="left-panel-btn left-panel-btn-active">BUDGET</button>
+    </div> -->
+
+
+    <div id="main-app-content">
+            <input value="#ffffff" type="color" id="background-color-input">
+            <button class="btn" id="budget-copy-btn" title="Copy Selected Items To Clipboard">
+                <i class="fas fa-copy"></i>
+            </button>
+        <div id="budget-table">
+                <div class="table-header">
+                    <div class="table-col-0"><input type="checkbox" title="Check/Uncheck All" name="" id="check-all-input"></div> 
+                    <div class="table-col-1"><button class="collapse-expand-all-btn btn collapse-btn" title="Collapse All" id="collapse-all-btn"><i class="fas fa-caret-down"></i></button></div> 
+                    <div class="table-col-2"><button id="add-master-category-btn" class="btn" title="Add New Master Category"><i class="fas fa-plus-square"></i></button></div> 
+                    <div class="table-col-3">Category</div>
+                    <div class="table-col-4">Weekly</div>
+                    <div class="table-col-5">Monthly</div>
+                    <div class="table-col-6">Yearly</div>
+                    <div class="table-col-7">%</div>
+                    <div class="table-col-8"></div>
+                    <div class="table-col-9"></div>
+                    <div class="table-col-10"></div>
+                </div>
+            <div id="budget-table-body">
+                <!-- <div class="budget-category-header income-total-header table-row" id="total-income">
+                    <div class="table-col-1">
+                        <button class="collapse-expand-btn collapse-btn" id="income-collapse-btn"><i class="fas fa-caret-down"></i></button>
+                    </div>
+                    <div class="table-col-2 table-cell"><button id="add-category-btn" title="Add New Category"><i class="fas fa-plus-circle"></i></button></div>
+                    <div class="table-col-3 table-cell">Total Income</div>
+                    <div class="table-col-4 table-cell" id="total-income-weekly">$0</div>
+                    <div class="table-col-5 table-cell" id="total-income-monthly">$0</div>
+                    <div class="table-col-6 table-cell" id="total-income-yearly">$0</div>
+                    <div class="table-col-7 table-cell"></div>
+                    <div class="table-col-8 table-cell"></div>
+                    <div class="table-col-9 table-cell"></div>
+                </div>                 -->
+                <!--
+                </tr> -->
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="app-sidebar-right">
+        <div class="positive">Incomes:</div>
+        <div class="incomes-input">
+            
+            <input type="checkbox" name="" id=""></div>
+        <div class="minus-sign">-</div>
+        <div class="negative">Expenses:</div>
+        <div class="expenses-input"><input type="checkbox" name="" id=""></div>
+    </div>
+
+</div>
+
+
+
+</main>
+<!-- Footer -->
+
+<!-- Javascript -->
+    <script src="budget-app.js"></script>
+    <!-- <script src="budget-mini.js"></script> -->
+    <!-- <script src="budget-app-dom.js"></script> -->
+    <script src="budget-sort.js"></script>
+
+</body>
+
+</html>
