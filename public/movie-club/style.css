@@ -295,15 +295,20 @@ nav .nav-container {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: left;
+  align-items: center;
+  /* justify-content: left; */
 }
 
 .info-ul li {
-  margin-right: 20px;
+  /* margin-right: 20px; */
+  margin-left: 30px;
+  text-align: left;
+  /* display: inline-block; */
 }
 
 .info-ul li:first-of-type {
   list-style-type: none;
+  margin-left: 0px;
 }
 
 .movie-showcase-container {
