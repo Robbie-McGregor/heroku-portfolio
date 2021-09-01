@@ -194,7 +194,7 @@ async function getCast(id){
 
     const showcaseEl = document.createElement('div')
     showcaseEl.classList.add('showcase')
-    showcaseEl.innerHTML = `<h1>Top Billed Cast</h1>`
+    showcaseEl.innerHTML = `<h2>Top Billed Cast</h2>`
 
     const showcaseSliderEl = document.createElement('div')
     showcaseSliderEl.classList.add('showcase-slider')
@@ -203,7 +203,7 @@ async function getCast(id){
         showcaseSliderEl.appendChild(makeCastCard(cast[i]))
     }
     const fullCast = document.createElement('div')
-    fullCast.innerHTML = `<p>See Full Cast and Crew</p>`
+    // fullCast.innerHTML = `<p>See Full Cast and Crew</p>`
     showcaseEl.appendChild(fullCast)
     app.appendChild(showcaseEl)
 }
