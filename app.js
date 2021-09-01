@@ -7,8 +7,8 @@ app.use(express.static(process.env.PWD + '/public'));
 // app.use(express.static(__dirname + '/public'));
 let port = process.env.PORT || 80
 
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname + req.url))
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname + `/${req.url}`))
 })
 
 app.listen(port, () => {
