@@ -32,7 +32,7 @@ const showcases = [
 ]
 const app = document.getElementById('app')
 const search = document.getElementById('search')
-const imgNotFound = './img-not-found.png'
+const imgNotFound = './img-not-found.jpeg'
 
   
 async function apiCall(url) {
