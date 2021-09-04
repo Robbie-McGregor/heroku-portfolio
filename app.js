@@ -11,7 +11,6 @@ app.enable('trust proxy')
 
 
 app.use((req, res, next) => {
-    if (process.env.NODE_ENV === 'production') {
         // perform host checking prior to https checking, by the way
         if (req.headers.host === 'robbie-mcgregor.herokuapp.com')
             // make express use your custom domain name instead of heroku's default
@@ -20,8 +19,6 @@ app.use((req, res, next) => {
             return res.redirect('https://' + req.headers.host + req.url);
         else
             return next();
-    } else
-        return next();
 });
 
 
