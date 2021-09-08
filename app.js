@@ -10,9 +10,11 @@ let port = process.env.PORT || 80
 
 
 app.get('*', (req, res) => {
-
+    console.log("hi")
     const host = req.header("host")
-    if(host.match(/\brobbiemcgregor.herokuapp.com\b/i)){
+    console.log(req.header)
+    console.log(host)
+    if(host.match(/\brobbie-mcgregor.herokuapp.com\b/i)){
         res.redirect(301, "https://www.robbie-mcgregor.com"  + req.url);
     }
 
