@@ -140,7 +140,7 @@ nav .logo {
 .header {
   width: 100%;
   /* background-color: var(--bg-color); */
-  background-image: url("../images/banner.jpg");
+  background-image: url("./images/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 25px;
